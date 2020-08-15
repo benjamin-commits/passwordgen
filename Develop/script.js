@@ -1,6 +1,23 @@
 // Assignment code here
+function generatePassword(){
+  // list of characters
+  var lower = "abcdefghijklmnopqrstuvwxyz";
+  var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var number = "0123456789";
+  var special = "!@#$%^&*";
 
-sdfdfs
+  var passwordString="";
+
+  // asking user for input
+  var useLowerCase=confirm("Would you like lowercase characters?");
+  var useUpperCase=confirm("Would you like upperchase characters?");
+  var useNumeric=confirm("Would you like numeric characters?");
+  var useSpecial=confirm("Would you like special characters?");
+
+  // 
+
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
