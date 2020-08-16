@@ -3,10 +3,9 @@ function generatePassword(){
   // list of characters
   var lower = "abcdefghijklmnopqrstuvwxyz";
   var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var number = "0123456789";
+  var numeric = "0123456789";
   var special = "!@#$%^&*";
 
-  var passwordString="";
 
   // asking user for input
   var useLowerCase=confirm("Would you like lowercase characters?");
@@ -31,27 +30,28 @@ function generatePassword(){
   }
 
   // arrays
+  var all = '';
+
   if (useLowerCase==true){
-    caseArray.push(lowerCaseChar);
+    all += lower;
   }
   if (useUpperCase==true){
-    caseArray.push(upperCaseChar);
+    all += upper;
   }
   if (useNumeric==true){
-    caseArray.push(numericChar);
+    all += numeric;
   }
   if (useSpecial==true){
-    caseArray.push(specialChar)
+    all += special;
   }
 
-  for(var i=0;i<passwordLength;i++){
-      var randomCharArrayNum;
-      var selectedCharArray;
-      var randomCharNum;
-      var randomChar
+  var password = '';
+  for(var i = 0; i < passwordLength; i++)
+    {
+      password += all.charAt(Math.floor(Math.random()*all.length));
+    }
+      return password;
 
-      randomCharArrayNum= parseInt(Math.floor(Math.random()*caseArray.length))
-  }
 }
 
 // Get references to the #generate element
